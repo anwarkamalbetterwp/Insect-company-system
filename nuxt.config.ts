@@ -50,5 +50,8 @@ export default defineNuxtConfig({
 		provider: "ipx",
 		quality: 80,
 	},
-	modules: ["@pinia/nuxt", "@nuxtjs/i18n", "@nuxt/image"],
+	pinia: {
+		storesDirs: ["./stores/**"],
+	},
+	modules: ["@pinia/nuxt", "@nuxtjs/i18n", "@nuxt/image", "@primevue/nuxt-module", "@nuxt/icon"],
 });
