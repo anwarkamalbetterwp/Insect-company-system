@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--primary: 208 146 36; /* rgba(208, 146, 36, 1); */
+		--secondary: 0 0 0; /* rgba(0, 0, 0, 1); */
+	}
+}
