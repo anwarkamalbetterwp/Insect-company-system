@@ -38,8 +38,11 @@ module.exports = {
 			fontSize: {
 				"clamp-sm": "clamp(1rem, 2vw, 1.25rem)", // Min: 16px, scales with viewport, Max: 20px
 				"clamp-md": "clamp(1.125rem, 2.5vw, 1.5rem)", // Min: 18px, scales with viewport, Max: 24px
-				"clamp-lg": "clamp(1.5rem, 3vw, 2rem)", // Min: 24px, scales with viewport, Max: 32px
-				"clamp-xl": "clamp(2rem, 4vw, 3rem)", // Min: 32px, scales with viewport, Max: 48px
+				"clamp-lg": "clamp(1.5rem, 3vw, 1.75rem)", // Min: 24px, scales with viewport, Max: 32px
+				"clamp-xl": "clamp(1.75rem, 3.5vw, 2rem)", // Min: 32px, scales with viewport, Max: 48px
+			},
+			dropShadow: {
+				xs: "0 .75px .75px rgba(0, 0, 0, 0.025)",
 			},
 		},
 	},

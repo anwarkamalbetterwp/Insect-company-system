@@ -53,5 +53,10 @@ export default defineNuxtConfig({
 	pinia: {
 		storesDirs: ["./stores/**"],
 	},
+	primevue: {
+		options: {
+			unstyled: true,
+		},
+	},
 	modules: ["@pinia/nuxt", "@nuxtjs/i18n", "@nuxt/image", "@primevue/nuxt-module", "@nuxt/icon"],
 });

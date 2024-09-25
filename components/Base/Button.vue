@@ -1,13 +1,20 @@
 <template>
-	<button :class="[baseClasses, variantClasses, sizeClasses]">
+	<button
+		:class="[
+			baseClasses,
+			variantClasses,
+			sizeClasses,
+			rounded ? 'aspect-square size-12 !p-2 rounded-full ' : '',
+		]">
 		<Icon
 			v-if="firstIcon"
 			:name="firstIcon"
 			class="icon"
+			:size="32"
 			:class="iconClass" />
-		<slot />
+		<slot v-if="!rounded" />
 		<Icon
-			v-if="lastIcon"
+			v-if="lastIcon && !rounded"
 			:name="lastIcon"
 			class="icon"
 			:class="iconClass" />
@@ -43,10 +50,15 @@
 		firstIcon: String,
 		lastIcon: String,
 		iconClass: String,
+		rounded: {
+			type: Boolean,
+			default: false,
+		},
 	});
 
 	// Base classes common to all buttons
-	const baseClasses = "rounded-lg font-medium px-4 py-2 transition-all  duration-300 border cent gap-1";
+	const baseClasses =
+		"rounded-lg font-medium px-4 py-2 transition-all  duration-300 border cent gap-1";
 	// Computed classes for the button variant
 	const variantClasses = computed(() => {
 		const normalizedVariant = props.variant.toLowerCase() as keyof typeof ButtonVariant;
@@ -81,6 +93,4 @@
 	});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
